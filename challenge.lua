@@ -2,7 +2,7 @@
 
 local logger = require "libs.logger"
 
-local SESSION_FILE = ".session_cookie"
+local SESSION_FILE = shell.dir() .. "/.session_cookie"
 
 local year, day, number, setup = ...
 local dir = fs.combine(shell.dir(), year, "Day" .. day, number)
@@ -34,17 +34,19 @@ local function blank_file()
 end
 
 local function input_txt()
-  local handle = io.open(SESSION_FILE, 'r')
+  local handle, err = io.open(SESSION_FILE, 'r')
 
-  if not handle then error("Failed to open session file! Does it exist?", 0) end
+  if not handle then printError("Failed to open session file! Does it exist?") error(err, 0) end
 
-  local cookie = handle:read("*a")
+  local cookie = handle:read("*a"):gsub("\n+$", "")
   handle:close()
 
-  local h, err = http.get("https://adventofcode.com/" .. year .. "/day/" .. day .. "/input", { cookie = cookie })
+  local h, err, errH = http.get("https://adventofcode.com/" .. year .. "/day/" .. day .. "/input",
+    { cookie = "session=" .. cookie })
   if not h then
     printError("Failed to download input:")
-    error(err, 0)
+    printError(err)
+    error(errH.readAll(), 0)
   end
 
   local data = h.readAll()
