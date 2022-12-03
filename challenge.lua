@@ -68,7 +68,7 @@ end
 if setup == true then
   logger.info("Setting up challenge.")
   local files = {
-    { fs.combine(dir, "challenge.md"), blank_file },
+    { fs.combine(dir, "README.md"), blank_file },
     { fs.combine(dir, "input.txt"), input_txt },
     { fs.combine(dir, "run.lua"), run_lua },
     { fs.combine(dir, "test_input.txt"), blank_file },
