@@ -5,7 +5,6 @@ local logger = require "libs.logger"
 local SESSION_FILE = shell.dir() .. "/.session_cookie"
 
 local year, day, number, setup = ...
-local dir = fs.combine(shell.dir(), year, "Day" .. day, number)
 
 local function print_usage()
   print("Usage:")
@@ -20,6 +19,7 @@ if year == "setup" then
   number = setup
   setup = true
 end
+local dir = fs.combine(shell.dir(), year, "Day" .. day, number)
 
 if not year or not day or not number or not tonumber(number) then
   print_usage()
