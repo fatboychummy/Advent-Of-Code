@@ -16,12 +16,6 @@ local function stack()
   }
 end
 
---local stacks = {}
-
---stacks[1] = stack():Insert('R'):Insert('P'):Insert('C'):Insert('D'):Insert('B'):Insert('G')
---stacks[2] = stack():Insert('H'):Insert('V'):Insert('G')
---stacks[3] = stack():Insert('R'):Insert('R'):Insert('R'):Insert('R'):Insert('R'):Insert('R'):Insert('R')
-
 return function(input, output)
   local lines = input.lines()
   local base_pattern = ".(.)..?"
