@@ -12,7 +12,6 @@ local function stack()
       return self
     end,
     Pop = function(self, count)
-      if not count then error("bruh", 2) end
       local values = {}
 
       for i = 1, count do
