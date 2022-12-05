@@ -36,7 +36,6 @@ return function(input, output)
     for char in line:gmatch(base_pattern) do
       stack_number = stack_number + 1
       if char ~= ' ' then
-        print(char)
         if stacks[stack_number] then
           stacks[stack_number]:Push(char)
         else
