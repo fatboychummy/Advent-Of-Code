@@ -1,0 +1,13 @@
+zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw
+nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg
+nppdvjthqldpwncqszvftbrmjlhg
+bvwbjplbgvbhsrlpgdmjqwftvncz
+mjqjpqmgbljsphdztnvjfqwrcgsmlb
+
+Shift the above lines around to test.
+
+mjqjpqmgbljsphdztnvjfqwrcgsmlb      = 7
+bvwbjplbgvbhsrlpgdmjqwftvncz        = 5
+nppdvjthqldpwncqszvftbrmjlhg        = 6
+nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg   = 10
+zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw    = 11
