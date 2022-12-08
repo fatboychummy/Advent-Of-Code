@@ -123,7 +123,7 @@ return function(input, output)
       --horizontal right
       local s_right = 0
       for _x = x + 1, tree_grid.w do
-        local gh = tree_grid:Get(_y, x).value
+        local gh = tree_grid:Get(y, _x).value
         s_right = s_right + 1
         if gh >= height then
           break
@@ -133,14 +133,13 @@ return function(input, output)
       --horizontal left
       local s_left = 0
       for _x = x - 1, 1, -1 do
-        local gh = tree_grid:Get(_y, x).value
+        local gh = tree_grid:Get(y, _x).value
         s_left = s_left + 1
         if gh >= height then
           break
         end
       end
 
-      print(s_up, s_down, s_left, s_right)
       -- combine score.
       test(s_up * s_down * s_left * s_right)
     end
