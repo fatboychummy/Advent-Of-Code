@@ -30,12 +30,12 @@ return function(input, output)
     positions:Get(knots[N_KNOTS].y, knots[N_KNOTS].x).value = true
 
     for _ = 1, steps do
-      for i = 1, N_KNOTS - 1 do
-        knots[i] = knots[i] + moves[direction]
+      knots[1] = knots[1] + moves[direction]
 
+      for i = 1, N_KNOTS - 1 do
         local diff = knots[i] - knots[i + 1]
-        print(diff.x, diff.y)
-        if math.abs(diff.x) > 1.1 or math.abs(diff.y) > 1.1 then
+
+        if math.abs(diff.x) > 1 or math.abs(diff.y) > 1 then
           knots[i + 1] = knots[i] - moves[direction]
         end
       end
