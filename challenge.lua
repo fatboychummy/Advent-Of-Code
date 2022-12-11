@@ -2,6 +2,9 @@
 
 local logger = require "libs.logger"
 
+package.path = ("%s;/%s/challenge_libs/?.lua;/%s/challenge_libs/?/init.lua")
+    :format(package.path, shell.dir(), shell.dir())
+
 local SESSION_FILE = shell.dir() .. "/.session_cookie"
 
 local year, day, number, setup = ...
