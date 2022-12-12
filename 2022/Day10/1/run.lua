@@ -45,7 +45,5 @@ return function(input, output)
     return sum
   end
 
-  print(textutils.serialize(memory))
-
   output.write(sum(20, 60, 100, 140, 180, 220))
 end
