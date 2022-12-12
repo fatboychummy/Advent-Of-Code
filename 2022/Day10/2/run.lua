@@ -2,8 +2,8 @@ local grid = require "grid"
 
 return function(input, output)
   local PATTERN_ADDX = "addx (%-?%d+)"
-  local LIT_CHAR = '\x7f'
-  local UNLIT_CHAR = '\xb7'
+  local LIT_CHAR = '#' -- '\x7f'
+  local UNLIT_CHAR = '.' --'\xb7'
   local crt = grid(UNLIT_CHAR)
 
   local memory = {
