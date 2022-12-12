@@ -53,10 +53,12 @@ return function(input, output)
 
   local answer = {}
 
-  for y = crt.h, crt.nh, -1 do
-    answer[y] = ""
+  local i = 0
+  for y = crt.nh, crt.h do
+    i = i + 1
+    answer[i] = ""
     for x = crt.nw, crt.w do
-      answer[y] = answer[y] .. crt:Get(y, x).value
+      answer[i] = answer[i] .. crt:Get(y, x).value
     end
   end
 
