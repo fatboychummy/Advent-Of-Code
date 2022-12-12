@@ -1,6 +1,5 @@
 return function(input, output)
   local PATTERN_ADDX = "addx (%-?%d+)"
-  local PATTERN_NOOP = "noop"
 
   local memory = {
     [0] = { x = 1 }
@@ -25,7 +24,6 @@ return function(input, output)
 
   for line in input.readLine do
     local addx = line:match(PATTERN_ADDX)
-    local noop = line:match(PATTERN_NOOP)
 
     if addx then
       operations.addx(tonumber(addx))
