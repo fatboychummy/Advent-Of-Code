@@ -28,6 +28,8 @@ local function grid()
       self[y][x] = grid_obj
       self.w = math.max(self.w, x)
       self.nw = math.min(self.nw, x)
+
+      return grid_obj
     end,
 
     --- Get the grid object at position y, x
