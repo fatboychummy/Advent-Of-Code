@@ -1,6 +1,7 @@
 local grid = require "linked_grid"
 
 ---@diagnostic disable:inject-field We need to inject a few fields and I'm too lazy to mark it as a new class.
+---@diagnostic disable:need-check-nil Just to disable warnings -- cannot have nil in the locations that we are getting warned for.
 
 return function(input, output)
   local lines = input.lines()
