@@ -1,5 +1,7 @@
 ---@class linked_grid_object
 ---@field value any The value of the grid object.
+---@field x integer The X position of the grid object.
+---@field y integer The Y position of the grid object.
 ---@field up linked_grid_object? The grid object above this one.
 ---@field down linked_grid_object? The grid object below this one.
 ---@field left linked_grid_object? The grid object to the left of this one.
@@ -42,7 +44,7 @@ local function grid()
         self.h = math.max(y, self.h)
         self.nh = math.min(y, self.nh)
       end
-      local grid_obj = { value = v }
+      local grid_obj = { value = v, x = x, y = y }
 
       self[y][x] = grid_obj
       self.w = math.max(self.w, x)
