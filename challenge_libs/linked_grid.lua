@@ -17,8 +17,13 @@ local function grid()
       end
       local grid_obj = { value = v }
 
+      -- cardinal
       grid_obj.up, grid_obj.down, grid_obj.left, grid_obj.right = self:Get(y - 1, x), self:Get(y + 1, x),
           self:Get(y, x - 1), self:Get(y, x + 1)
+      
+      -- diagonal
+      grid_obj.up_left, grid_obj.up_right, grid_obj.down_left, grid_obj.down_right = self:Get(y - 1, x - 1),
+          self:Get(y - 1, x + 1), self:Get(y + 1, x - 1), self:Get(y + 1, x + 1)
 
       self[y][x] = grid_obj
       self.w = math.max(self.w, x)
