@@ -1,5 +1,4 @@
 local split = require("string_split")
-local timing = require("timing")
 
 --- Calculate the points for a given hand and winning numbers.
 --- @param lr table<integer, string> The two halves of the line.
