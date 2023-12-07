@@ -1,21 +1,3 @@
---[[ Input specifications:
-  Time:      7  15   30
-  Distance:  9  40  200
-
-  Each race is a column. The time allowed per race is described by the "Time"
-  row, and the distance the fastest boat of the race traveled is described by
-  the "Distance" row.
-
-  "Holding" the boat will increase its travel speed by 1 (but keep it
-  stationary), and can only be done at the start of the race.
-
-  Once you let go of the boat, it will travel at its current speed until it runs
-  out of time.
-
-  The goal is to determine how many ways we can beat the record in each race,
-  then multiply the counts of each race together.
-]]
-
 local string_util = require "string_utils"
 local table_util = require "table_utils"
 
