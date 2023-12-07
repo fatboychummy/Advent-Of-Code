@@ -22,8 +22,12 @@ challenge setup year day challenge_number
 
 This will create a couple files for you.
 
-1. `challenge.md` - Store the challenge question here if you want, add markdown
-   styling to it to make it look nice on github.
+1. `README.md` - Store the challenge question here if you want, add markdown
+   styling to it to make it look nice in whatever editor you use.
+   **NOTE: According to AoC's**
+   **[about page](https://adventofcode.com/2023/about), they prefer us not to**
+   **rehost the challenge text, so I recommend adding `*/*/*/README.md` to**
+   **your `.gitignore` file.**
 2. `input.txt` - Uses your session cookie to download the challenge input for
    given year and day.
 3. `output.txt` - Will be blank until you run the challenge, stores the output
