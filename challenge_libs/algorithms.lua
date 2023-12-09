@@ -16,7 +16,7 @@ local function _GCD(a, b)
   return _GCD(b, a % b)
 end
 
---- Returns the greatest common divisor of two numbers.
+--- Uses Euclidean's algorithm to return the greatest common divisor of two or more numbers.
 ---@param ... number The numbers to find the GCD of.
 ---@return number The GCD of the numbers.
 function algorithms.GCD(...)
